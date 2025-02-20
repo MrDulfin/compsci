@@ -3,6 +3,7 @@
 // Creating a dynamic array using only static arrays
 
 int main(void) {
+    printf("Enter 10 numbers: ");
     int cap = 2;
     int num = 0;
 
@@ -21,6 +22,7 @@ int main(void) {
             {
                 arr_[j] = arr[j];
             }
+            free(arr);
             arr = arr_;
         }
         arr[i] = num;
@@ -31,5 +33,6 @@ int main(void) {
         }
         printf("] cap: %d\n", cap);
     }
+    free(arr);
     return 0;
 }
